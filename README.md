@@ -1,5 +1,4 @@
-# 📚 Blog de Historia y Geografía – Profe Moncayo
-
+# 📚 Profe Moncayo - Blog de Historia y Geografía
 **Objetivo:** que todas y todos los alumnos puedan **acceder al material de estudio de manera rápida y fácil**, desde cualquier dispositivo, con descripciones claras y acceso directo por año y materia.
 
 ---
