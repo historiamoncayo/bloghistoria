@@ -4,97 +4,105 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>📚 Blog de Historia</title>
-  <meta name="description" content="Material de estudio organizado por años académicos para Ciencias Sociales, Historia y Geografía.">
+  <meta name="description" content="Repositorio de materiales por año. 1º: Ciencias Sociales. 2º a 5º: Historia y Geografía.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
   <style>
-  /* Estilos básicos para la página principal */
-  :root{
-    --red:#8B1E3F; --red2:#B6313D; --gold:#CBB26A;
-    --paper:#F8F5EC; --ink:#222; --ink2:#555; --line:#E2DED0;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.6}
-  h1,h2,h3,h4{font-family:Merriweather,Georgia,serif}
-  a{color:var(--red);text-decoration:none}
-  a:hover{color:var(--red2);text-decoration:underline}
-  .container{max-width:1100px;margin:0 auto;padding:24px}
-  header{padding:18px 24px;border-bottom:1px solid var(--line);background:#fff7;backdrop-filter:blur(6px);position:sticky;top:0}
-  header .brand{font-weight:800;color:var(--red);font-size:1.2rem}
-  .anos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0}
-  .ano-card{border:2px solid var(--line);border-radius:12px;padding:1.5rem;background:var(--paper);transition:all .3s}
-  .ano-card:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:0 8px 25px rgba(139,30,63,.1)}
-  .ano-card h3{color:var(--red);margin:.2rem 0 .6rem}
-  .materias{margin:1rem 0}
-  .materia-tag{display:inline-block;padding:.3rem .7rem;border-radius:20px;font-size:.8rem;font-weight:600;margin:.2rem .3rem .2rem 0}
-  .materia-tag.cs{background:var(--gold);color:#222}
-  .materia-tag.historia{background:var(--red);color:#fff}
-  .materia-tag.geografia{background:var(--red2);color:#fff}
-  .btn-ano{display:inline-block;padding:.8rem 1.2rem;background:var(--red);color:#fff;border-radius:8px;font-weight:600}
-  .btn-ano:hover{background:var(--red2)}
-  .stats{margin-top:1rem;text-align:center}
-  .stats small{color:var(--ink2);font-style:italic}
-  .ultimos-posts{margin:2rem 0}
-  .post-preview{border-bottom:1px solid var(--line);padding:1rem 0}
-  .post-meta{margin:.5rem 0;display:flex;flex-wrap:wrap;gap:.5rem}
-  .ano-badge,.materia-badge,.tipo-badge{padding:.2rem .6rem;border-radius:15px;font-size:.8rem;font-weight:600}
-  .ano-badge{background:var(--gold);color:#222}
-  .materia-badge{background:var(--red);color:#fff}
-  .tipo-badge{background:var(--line);color:var(--ink2)}
-  .estadisticas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:2rem 0}
-  .stat-box{text-align:center;padding:1.5rem;background:var(--paper);border-radius:12px;border:1px solid var(--line)}
-  .stat-box h4{font-size:2rem;color:var(--red);margin:.2rem 0 .5rem}
-  .navegacion-rapida{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin:2rem 0}
-  .nav-section{background:var(--paper);padding:1.5rem;border-radius:12px;border:1px solid var(--line)}
-  .nav-section h4{color:var(--red);margin:0 0 1rem}
-  .nav-section ul{list-style:none;margin:0;padding:0}
-  .nav-section li{margin:.5rem 0}
-  .nav-section a{color:var(--ink2)}
-  .nav-section a:hover{color:var(--red)}
-  .mensaje-bienvenida{background:var(--paper);padding:2rem;border-radius:12px;border-left:4px solid var(--red);margin:3rem 0}
-  footer{border-top:1px solid var(--line);padding:24px;text-align:center;color:var(--ink2)}
-  @media (max-width:768px){
-    .post-meta{flex-direction:column;align-items:flex-start}
-    .estadisticas{grid-template-columns:repeat(2,1fr)}
-  }
+    :root{--red:#8B1E3F;--red2:#B6313D;--gold:#CBB26A;--paper:#F8F5EC;--ink:#222;--ink2:#555;--line:#E2DED0}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.6}
+    h1,h2,h3{font-family:Merriweather,Georgia,serif}
+    a{color:var(--red);text-decoration:none}
+    a:hover{color:var(--red2);text-decoration:underline}
+    header{padding:18px 24px;border-bottom:1px solid var(--line);background:#fff7;backdrop-filter:blur(6px);position:sticky;top:0}
+    header .brand{font-weight:800;color:var(--red)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;margin:1.5rem 0}
+    .card{border:2px solid var(--line);border-radius:12px;padding:1.2rem;background:var(--paper);transition:.25s}
+    .card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 8px 24px rgba(139,30,63,.08)}
+    .pill{display:inline-block;padding:.35rem .7rem;border-radius:999px;font-size:.8rem;margin:.2rem .35rem .2rem 0;border:1px solid var(--line)}
+    .pill.cs{background:var(--gold);color:#222}
+    .pill.his{background:var(--red);color:#fff;border-color:transparent}
+    .pill.geo{background:var(--red2);color:#fff;border-color:transparent}
+    .btn{display:inline-block;padding:.7rem 1rem;border-radius:10px;background:var(--red);color:#fff;font-weight:600}
+    .btn:hover{background:var(--red2)}
+    .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.6rem}
+    @media (max-width:700px){.cols-2{grid-template-columns:1fr}}
+    footer{border-top:1px solid var(--line);padding:24px;text-align:center;color:var(--ink2)}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a class="brand" href="./">Materiales de Historia</a>
-    </div>
-  </header>
+  <header><div class="container">
+    <a class="brand" href="./">Materiales de Historia</a>
+  </div></header>
 
   <main class="container">
-    <h1>📚 Bienvenidos al Blog de Historia</h1>
-    <p><em>Material de estudio organizado por años académicos para Ciencias Sociales, Historia y Geografía.</em></p>
+    <h1>📚 Blog de Historia</h1>
+    <p><em>1º año: Ciencias Sociales. 2º a 5º: Historia y Geografía.</em></p>
 
-    <h2>🎓 Acceso por Año Académico</h2>
-    <div class="anos-grid">
-      <div class="ano-card">
-        <h3>🌱 1er Año</h3>
-        <h4>Ciencias Sociales</h4>
+    <h2>🎓 Acceso por Año</h2>
+    <div class="grid">
+      <!-- 1er año: solo Cs. Sociales -->
+      <section class="card">
+        <h3>🌱 1º Año</h3>
+        <p class="pill cs">Ciencias Sociales</p>
         <p>Introducción a las ciencias sociales, conceptos fundamentales y metodología básica.</p>
-        <div class="materias">
-          <span class="materia-tag cs">Ciencias Sociales</span>
-        </div>
-        <a class="btn-ano" href="./1er-anio/">Ver Material</a>
-        <div class="stats"><small>0 materiales disponibles</small></div>
-      </div>
+        <a class="btn" href="./1er-anio/">Entrar a 1º Año</a>
+      </section>
 
-      <div class="ano-card">
-        <h3>📖 2do Año</h3>
-        <h4>Historia y Geografía</h4>
-        <p>Historia Argentina y Mundial, Geografía General. Desarrollo de habilidades analíticas.</p>
-        <div class="materias">
-          <span class="materia-tag historia">Historia</span>
-          <span class="materia-tag geografia">Geografía</span>
+      <!-- 2º a 5º: Historia y Geografía -->
+      <section class="card">
+        <h3>📖 2º Año</h3>
+        <div class="cols-2">
+          <div><span class="pill his">Historia</span><br><a class="btn" href="./2do-anio/historia/">Ver Historia</a></div>
+          <div><span class="pill geo">Geografía</span><br><a class="btn" href="./2do-anio/geografia/">Ver Geografía</a></div>
         </div>
-        <a class="btn-ano" href="./2do-anio/">Ver Material</a>
-        <div class="stats"><small>0 materiales disponibles</small></div>
-      </div>
+      </section>
 
-      <div class="ano-card">
-        <h3>🏛️ 3er Año</h3>
-        <h4>Historia y Geografía</h4>
+      <section class="card">
+        <h3>🏛️ 3º Año</h3>
+        <div class="cols-2">
+          <div><span class="pill his">Historia</span><br><a class="btn" href="./3er-anio/historia/">Ver Historia</a></div>
+          <div><span class="pill geo">Geografía</span><br><a class="btn" href="./3er-anio/geografia/">Ver Geografía</a></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>🌍 4º Año</h3>
+        <div class="cols-2">
+          <div><span class="pill his">Historia</span><br><a class="btn" href="./4to-anio/historia/">Ver Historia</a></div>
+          <div><span class="pill geo">Geografía</span><br><a class="btn" href="./4to-anio/geografia/">Ver Geografía</a></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>🎓 5º Año</h3>
+        <div class="cols-2">
+          <div><span class="pill his">Historia</span><br><a class="btn" href="./5to-anio/historia/">Ver Historia</a></div>
+          <div><span class="pill geo">Geografía</span><br><a class="btn" href="./5to-anio/geografia/">Ver Geografía</a></div>
+        </div>
+      </section>
+    </div>
+
+    <h2>🔎 Navegación rápida</h2>
+    <div class="grid">
+      <section class="card">
+        <h3>Por materia</h3>
+        <p>
+          <a href="./materia/ciencias-sociales/" class="pill cs">Ciencias Sociales</a>
+          <a href="./materia/historia/" class="pill his">Historia</a>
+          <a href="./materia/geografia/" class="pill geo">Geografía</a>
+        </p>
+      </section>
+      <section class="card">
+        <h3>Sobre el profesor</h3>
+        <p>Programa, metodología y contacto.</p>
+        <a class="btn" href="./sobre-mi/">Ver información</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>© <span id="y"></span> · Materiales de Historia · GitHub Pages</footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
