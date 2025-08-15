@@ -8,41 +8,67 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
   <style>
-    :root{--red:#8B1E3F;--red2:#B6313D;--gold:#CBB26A;--paper:#F8F5EC;--ink:#222;--ink2:#555;--line:#E2DED0}
+    :root{
+      --bg:#FBF6F4;
+      --card-bg:#FFF9F7;
+      --line:#E8D6D0;
+      --ink:#3B2C29;
+      --ink2:#6D4E4E;
+      --red-main:#A13D3A;   /* rojo cálido principal */
+      --red-accent:#C24E4B; /* hover/acento */
+      --red-dark:#7B2E2B;
+      --pill-hist:#C24E4B;
+      --pill-geo:#D9695F;
+      --pill-cs:#E9B44C;    /* dorado cálido */
+      --radius:14px;
+    }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.6}
-    h1,h2,h3{font-family:Merriweather,Georgia,serif}
-    a{color:var(--red);text-decoration:none}
-    a:hover{color:var(--red2);text-decoration:underline}
-    header{padding:18px 24px;border-bottom:1px solid var(--line);background:#fff7;backdrop-filter:blur(6px);position:sticky;top:0}
-    header .brand{font-weight:800;color:var(--red)}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.65}
+    h1,h2,h3{font-family:Merriweather,Georgia,serif;margin:.2rem 0 .6rem}
+    a{color:var(--red-main);text-decoration:none}
+    a:hover{color:var(--red-accent);text-decoration:underline}
+
+    header{padding:18px 24px;border-bottom:1px solid var(--line);background:var(--card-bg);position:sticky;top:0;z-index:10}
+    header .brand{font-weight:800;color:var(--red-main)}
     .container{max-width:1100px;margin:0 auto;padding:24px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;margin:1.5rem 0}
-    .card{border:2px solid var(--line);border-radius:12px;padding:1.2rem;background:var(--paper);transition:.25s}
-    .card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 8px 24px rgba(139,30,63,.08)}
-    .pill{display:inline-block;padding:.35rem .7rem;border-radius:999px;font-size:.8rem;margin:.2rem .35rem .2rem 0;border:1px solid var(--line)}
-    .pill.cs{background:var(--gold);color:#222}
-    .pill.his{background:var(--red);color:#fff;border-color:transparent}
-    .pill.geo{background:var(--red2);color:#fff;border-color:transparent}
-    .btn{display:inline-block;padding:.7rem 1rem;border-radius:10px;background:var(--red);color:#fff;font-weight:600}
-    .btn:hover{background:var(--red2)}
-    .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.6rem}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:1.5rem 0}
+    .card{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;transition:.3s}
+    .card:hover{border-color:var(--red-main);box-shadow:0 10px 28px rgba(161,61,58,.12);transform:translateY(-4px)}
+
+    .pill{display:inline-block;padding:.38rem .78rem;border-radius:999px;font-size:.83rem;font-weight:700;margin:.25rem .35rem .75rem 0;color:#fff}
+    .pill.cs{background:var(--pill-cs);color:#2b211f}
+    .pill.his{background:var(--pill-hist)}
+    .pill.geo{background:var(--pill-geo)}
+
+    .btn{display:inline-block;padding:.75rem 1.15rem;border-radius:10px;background:var(--red-main);color:#fff;font-weight:800;text-align:center;border:1px solid transparent;box-shadow:inset 0 -2px 0 rgba(0,0,0,.08)}
+    .btn:hover{background:var(--red-accent)}
+    .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-top:.6rem}
     @media (max-width:700px){.cols-2{grid-template-columns:1fr}}
+
+    .section-title{display:flex;align-items:center;gap:.6rem}
+    .section-title::after{content:"";flex:1;border-top:1px dashed var(--line);opacity:.9}
+
+    .quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+    .muted{color:var(--ink2)}
+
     footer{border-top:1px solid var(--line);padding:24px;text-align:center;color:var(--ink2)}
   </style>
 </head>
 <body>
-  <header><div class="container">
-    <a class="brand" href="./">Materiales de Historia</a>
-  </div></header>
+  <header>
+    <div class="container">
+      <a class="brand" href="./">Materiales de Historia</a>
+    </div>
+  </header>
 
   <main class="container">
     <h1>📚 Blog de Historia</h1>
-    <p><em>1º año: Ciencias Sociales. 2º a 5º: Historia y Geografía.</em></p>
+    <p class="muted"><em>1º año: Ciencias Sociales. 2º a 5º: Historia y Geografía.</em></p>
 
-    <h2>🎓 Acceso por Año</h2>
+    <h2 class="section-title">🎓 Acceso por Año</h2>
     <div class="grid">
-      <!-- 1er año: solo Cs. Sociales -->
+      <!-- 1º Año: solo Ciencias Sociales -->
       <section class="card">
         <h3>🌱 1º Año</h3>
         <p class="pill cs">Ciencias Sociales</p>
@@ -50,53 +76,77 @@
         <a class="btn" href="./1er-anio/">Entrar a 1º Año</a>
       </section>
 
-      <!-- 2º a 5º: Historia y Geografía -->
+      <!-- 2º a 5º Año: Historia y Geografía -->
       <section class="card">
         <h3>📖 2º Año</h3>
         <div class="cols-2">
-          <div><span class="pill his">Historia</span><br><a class="btn" href="./2do-anio/historia/">Ver Historia</a></div>
-          <div><span class="pill geo">Geografía</span><br><a class="btn" href="./2do-anio/geografia/">Ver Geografía</a></div>
+          <div>
+            <span class="pill his">Historia</span><br>
+            <a class="btn" href="./2do-anio/historia/">Ver Historia</a>
+          </div>
+          <div>
+            <span class="pill geo">Geografía</span><br>
+            <a class="btn" href="./2do-anio/geografia/">Ver Geografía</a>
+          </div>
         </div>
       </section>
 
       <section class="card">
         <h3>🏛️ 3º Año</h3>
         <div class="cols-2">
-          <div><span class="pill his">Historia</span><br><a class="btn" href="./3er-anio/historia/">Ver Historia</a></div>
-          <div><span class="pill geo">Geografía</span><br><a class="btn" href="./3er-anio/geografia/">Ver Geografía</a></div>
+          <div>
+            <span class="pill his">Historia</span><br>
+            <a class="btn" href="./3er-anio/historia/">Ver Historia</a>
+          </div>
+          <div>
+            <span class="pill geo">Geografía</span><br>
+            <a class="btn" href="./3er-anio/geografia/">Ver Geografía</a>
+          </div>
         </div>
       </section>
 
       <section class="card">
         <h3>🌍 4º Año</h3>
         <div class="cols-2">
-          <div><span class="pill his">Historia</span><br><a class="btn" href="./4to-anio/historia/">Ver Historia</a></div>
-          <div><span class="pill geo">Geografía</span><br><a class="btn" href="./4to-anio/geografia/">Ver Geografía</a></div>
+          <div>
+            <span class="pill his">Historia</span><br>
+            <a class="btn" href="./4to-anio/historia/">Ver Historia</a>
+          </div>
+          <div>
+            <span class="pill geo">Geografía</span><br>
+            <a class="btn" href="./4to-anio/geografia/">Ver Geografía</a>
+          </div>
         </div>
       </section>
 
       <section class="card">
         <h3>🎓 5º Año</h3>
         <div class="cols-2">
-          <div><span class="pill his">Historia</span><br><a class="btn" href="./5to-anio/historia/">Ver Historia</a></div>
-          <div><span class="pill geo">Geografía</span><br><a class="btn" href="./5to-anio/geografia/">Ver Geografía</a></div>
+          <div>
+            <span class="pill his">Historia</span><br>
+            <a class="btn" href="./5to-anio/historia/">Ver Historia</a>
+          </div>
+          <div>
+            <span class="pill geo">Geografía</span><br>
+            <a class="btn" href="./5to-anio/geografia/">Ver Geografía</a>
+          </div>
         </div>
       </section>
     </div>
 
-    <h2>🔎 Navegación rápida</h2>
-    <div class="grid">
+    <h2 class="section-title">🔎 Navegación rápida</h2>
+    <div class="quick">
       <section class="card">
         <h3>Por materia</h3>
         <p>
-          <a href="./materia/ciencias-sociales/" class="pill cs">Ciencias Sociales</a>
-          <a href="./materia/historia/" class="pill his">Historia</a>
-          <a href="./materia/geografia/" class="pill geo">Geografía</a>
+          <a class="pill cs" href="./materia/ciencias-sociales/">Ciencias Sociales</a>
+          <a class="pill his" href="./materia/historia/">Historia</a>
+          <a class="pill geo" href="./materia/geografia/">Geografía</a>
         </p>
       </section>
       <section class="card">
         <h3>Sobre el profesor</h3>
-        <p>Programa, metodología y contacto.</p>
+        <p class="muted">Programa, metodología y contacto.</p>
         <a class="btn" href="./sobre-mi/">Ver información</a>
       </section>
     </div>
