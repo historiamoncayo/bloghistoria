@@ -1,13 +1,23 @@
-# 📚 Blog de Historia – GitHub Pages
+# 📚 Blog de Historia y Geografía – Profe Moncayo
 
-**Objetivo:** que todas y todos los alumnos puedan **acceder al material de estudio de manera rápida y fácil**, desde cualquier dispositivo, con una presentación clara de los contenidos de cada año según el Plan de Estudio 2025 de Argentina.
+**Objetivo:** que todas y todos los alumnos puedan **acceder al material de estudio de manera rápida y fácil**, desde cualquier dispositivo, con descripciones claras y acceso directo por año y materia.
+
+---
+
+## 🖼 Encabezado
+
+La portada incluye:
+- **Título:** _Historia y Geografía – Profe Moncayo_
+- **Foto del profesor** a la derecha (archivo: `assets/img/profe-moncayo.jpg`)
+
+---
 
 ## 🧭 Estructura de la portada
 
-El inicio muestra una **lista por año** con tres columnas:
+El inicio presenta una **lista por año** con tres columnas:
 1. **Columna izquierda:** recuadro con el número de año.
-2. **Columna central:** breve descripción de los contenidos principales del año (Historia y/o Geografía).
-3. **Columna derecha:** botones para acceder directamente al material correspondiente.
+2. **Columna central:** descripción breve de los contenidos de Historia y/o Geografía, alineados con el Plan de Estudio 2025.
+3. **Columna derecha:** botones para acceder directamente al material.
 
 ### Contenidos por año
 
@@ -35,9 +45,28 @@ El inicio muestra una **lista por año** con tres columnas:
   _Geografía Regional_: integración latinoamericana y problemáticas ambientales globales.  
   **Botones:** `Ver Historia` · `Ver Geografía`
 
+---
+
+## 📚 Secciones adicionales
+
+Al final de la portada se incluyen dos recuadros:
+
+1. **Material de interés adicional**  
+   Espacio para enlaces a recursos extra, bibliografía recomendada, artículos académicos y materiales complementarios.
+
+2. **Datos del profesor**  
+   - **Nombre:** Juan Moncayo  
+   - **Celular:** +54 9 11 1234 5678  
+   - **Correo electrónico:** juan.moncayo@colegio.edu.ar  
+
+---
+
 ## 📂 Estructura de carpetas
+
 / (raíz)
 ├─ index.html
+├─ assets/
+│ └─ img/profe-moncayo.jpg
 ├─ 1er-anio/
 │ └─ index.html
 ├─ 2do-anio/
@@ -57,7 +86,10 @@ El inicio muestra una **lista por año** con tres columnas:
 ├─ historia/index.html
 └─ geografia/index.html
 
+
 > Cada carpeta debe contener un `index.html` con enlaces a los materiales (Drive, PDF, presentaciones, videos, etc.).
+
+---
 
 ## 🚀 Publicación en GitHub Pages
 
@@ -65,6 +97,8 @@ El inicio muestra una **lista por año** con tres columnas:
 2. En **Source**, seleccionar `Deploy from a branch`.  
 3. Elegir la rama `main` y la carpeta `/ (root)`.  
 4. Guardar. La URL pública estará activa en menos de 2 minutos.
+
+---
 
 ## 🧱 Plantilla mínima para subpáginas
 
@@ -78,3 +112,4 @@ El inicio muestra una **lista por año** con tres columnas:
   <li><a href="https://drive.google.com/...">Unidad 2 – Presentación</a></li>
 </ul>
 <p><a href="../../">← Volver al inicio</a></p>
+
