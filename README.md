@@ -1,12 +1,11 @@
-# Blog de Historia – GitHub Pages
+# 📚 Blog de Historia – GitHub Pages
 
-Repositorio de materiales para secundaria.
+Repositorio de materiales educativos organizado por **años académicos** y **materias**.
 
-- **1º Año:** _Ciencias Sociales_
-- **2º–5º Año:** _Historia_ y _Geografía_ (dos secciones por año)
+- **1º Año:** Ciencias Sociales  
+- **2º a 5º Año:** Historia y Geografía (secciones separadas)
 
-## Estructura de carpetas esperada
-
+## 📂 Estructura de carpetas
 / (raíz)
 ├─ index.html
 ├─ 1er-anio/
@@ -28,13 +27,15 @@ Repositorio de materiales para secundaria.
 ├─ historia/index.html
 └─ geografia/index.html
 
+> Cada carpeta contiene un `index.html` con los enlaces a los materiales correspondientes.
+
 ## 🚀 Publicación en GitHub Pages
 
-1. Ir a **Settings → Pages**  
+1. Ir a **Settings → Pages**.  
 2. En **Source**, seleccionar `Deploy from a branch`.  
 3. Elegir la rama `main` y la carpeta `/ (root)`.  
 4. Guardar cambios.  
-5. La URL pública se genera en menos de 2 minutos.
+5. La URL pública estará activa en menos de 2 minutos.
 
 ## 📝 Plantillas mínimas
 
@@ -48,4 +49,3 @@ Repositorio de materiales para secundaria.
   <li><a href="https://drive.google.com/...">Unidad 1 – Apuntes</a></li>
 </ul>
 <a href="../../">← Volver al inicio</a>
-
