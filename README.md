@@ -1,11 +1,26 @@
 # 📚 Blog de Historia – GitHub Pages
 
-Repositorio de materiales educativos organizado por **años académicos** y **materias**.
+**Objetivo:** que todas y todos los alumnos puedan **acceder al material de estudio de manera rápida y fácil**, desde cualquier dispositivo.
 
-- **1º Año:** Ciencias Sociales  
-- **2º a 5º Año:** Historia y Geografía (secciones separadas)
+## 🧭 Navegación (estructura del sitio)
+El inicio muestra una **lista por año** con acciones claras:
 
-## 📂 Estructura de carpetas
+- **1º Año** → _Ciencias Sociales_ (única sección)  
+  `/<raíz>/1er-anio/`
+- **2º Año** → _Historia_ y _Geografía_  
+  `/2do-anio/historia/` · `/2do-anio/geografia/`
+- **3º Año** → _Historia_ y _Geografía_  
+  `/3er-anio/historia/` · `/3er-anio/geografia/`
+- **4º Año** → _Historia_ y _Geografía_  
+  `/4to-anio/historia/` · `/4to-anio/geografia/`
+- **5º Año** → _Historia_ y _Geografía_  
+  `/5to-anio/historia/` · `/5to-anio/geografia/`
+
+Accesos adicionales:
+- Por materia: `/materia/ciencias-sociales/`, `/materia/historia/`, `/materia/geografia/`
+- Información del profesor: `/sobre-mi/`
+
+## 📂 Estructura de carpetas (repositorio)
 / (raíz)
 ├─ index.html
 ├─ 1er-anio/
@@ -27,25 +42,24 @@ Repositorio de materiales educativos organizado por **años académicos** y **ma
 ├─ historia/index.html
 └─ geografia/index.html
 
-> Cada carpeta contiene un `index.html` con los enlaces a los materiales correspondientes.
+> Cada carpeta debe contener un `index.html` con los enlaces a los materiales (Drive, PDF, presentaciones, videos, etc.).
 
 ## 🚀 Publicación en GitHub Pages
+1. **Settings → Pages**  
+2. **Source:** `Deploy from a branch`  
+3. **Branch:** `main` · **Folder:** `/ (root)`  
+4. Guardar. La URL pública se actualiza automáticamente.
 
-1. Ir a **Settings → Pages**.  
-2. En **Source**, seleccionar `Deploy from a branch`.  
-3. Elegir la rama `main` y la carpeta `/ (root)`.  
-4. Guardar cambios.  
-5. La URL pública estará activa en menos de 2 minutos.
+## 🧱 Plantilla mínima para subpáginas
 
-## 📝 Plantillas mínimas
-
-**Página de año/materia (`index.html`):**
+**Año / Materia – `index.html`**
 ```html
 <!doctype html><meta charset="utf-8">
 <title>2º Año – Historia</title>
 <h1>2º Año – Historia</h1>
+<p>Índice de materiales.</p>
 <ul>
-  <!-- Agregar enlaces a materiales -->
   <li><a href="https://drive.google.com/...">Unidad 1 – Apuntes</a></li>
+  <li><a href="https://drive.google.com/...">Unidad 2 – Presentación</a></li>
 </ul>
-<a href="../../">← Volver al inicio</a>
+<p><a href="../../">← Volver al inicio</a></p>
