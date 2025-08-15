@@ -4,38 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>📚 Blog de Historia</title>
-  <meta name="description" content="Objetivo: que todos los alumnos puedan acceder al material de estudio de manera rápida y fácil.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
   <style>
-    /* Paleta cálida y armónica */
     :root{
-      --bg:#FBF6F4;            /* fondo general */
-      --paper:#FFF9F7;         /* contenedores */
-      --line:#E8D6D0;          /* bordes */
-      --ink:#362A28;           /* texto principal */
-      --ink-2:#6D5A58;         /* texto secundario */
-      --red:#A13D3A;           /* rojo principal */
-      --red-2:#C24E4B;         /* hover/acento */
-      --geo:#D96B5F;           /* geografía */
-      --cs:#E9B44C;            /* ciencias sociales */
+      --bg:#FBF6F4;
+      --paper:#FFF9F7;
+      --line:#E8D6D0;
+      --ink:#362A28;
+      --ink-2:#6D5A58;
+      --red:#A13D3A;
+      --red-2:#C24E4B;
+      --geo:#D96B5F;
+      --cs:#E9B44C;
       --radius:14px;
       --space: clamp(14px, 2vw, 22px);
     }
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.65}
-    h1,h2,h3{font-family:Merriweather,Georgia,serif;margin:.2rem 0 .6rem}
-    a{color:var(--red);text-decoration:none}
-    a:hover{color:var(--red-2);text-decoration:underline}
-
-    /* Layout */
+    h1,h2{font-family:Merriweather,Georgia,serif;margin:.2rem 0 .6rem}
     header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line);}
     .wrap{max-width:980px;margin:0 auto;padding:var(--space)}
-    .lead{margin:.5rem 0 1rem;color:var(--ink-2)}
-    .goal{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--red);padding:1rem;border-radius:var(--radius);margin:1rem 0 2rem}
-    .goal strong{color:var(--red)}
-
-    /* Lista de años (armónica y clara) */
     .years{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
     .year{
       display:grid;grid-template-columns: 80px 1fr auto;align-items:center;
@@ -49,12 +38,6 @@
       align-items:center;justify-content:center;font-weight:800;color:var(--red)
     }
     .badge-year small{font-size:.75rem;color:var(--ink-2);margin-top:.15rem}
-    .year h3{margin:0}
-    .year p{margin:.25rem 0 0;color:var(--ink-2)}
-    .chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.4rem}
-    .chip{display:inline-block;padding:.32rem .7rem;border-radius:999px;font-size:.8rem;font-weight:700;color:#fff;background:var(--red)}
-    .chip.geo{background:var(--geo)}
-    .chip.cs{background:var(--cs);color:#2e261f}
     .actions{display:flex;gap:.5rem;flex-wrap:wrap}
     .btn{
       display:inline-block;padding:.6rem .9rem;border-radius:10px;font-weight:800;color:#fff;background:var(--red);
@@ -63,17 +46,10 @@
     .btn:hover{background:var(--red-2)}
     .btn.geo{background:var(--geo)}
     .btn.cs{background:var(--red)}
-
-    /* Secciones inferiores */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.5rem}
-    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1rem}
-    .muted{color:var(--ink-2)}
-
     footer{border-top:1px solid var(--line);margin-top:2rem;padding:var(--space);text-align:center;color:var(--ink-2)}
     @media (max-width:720px){
       .year{grid-template-columns:64px 1fr;grid-template-rows:auto auto;margin:0}
       .actions{grid-column:1/-1}
-      .badge-year{width:56px;height:56px}
     }
   </style>
 </head>
@@ -86,28 +62,16 @@
 
   <main class="wrap">
     <h1>📚 Blog de Historia</h1>
-    <p class="lead">Repositorio oficial de materiales por año y materia.</p>
 
-    <div class="goal" role="note" aria-label="Objetivo del blog">
-      <p><strong>Objetivo:</strong> que todas y todos los alumnos puedan <strong>acceder al material de estudio de manera rápida y fácil</strong>, desde cualquier dispositivo.</p>
-    </div>
-
-    <h2>🎓 Acceso por Año</h2>
     <ul class="years">
       <!-- 1º Año -->
       <li class="year">
         <div class="badge-year">
           1º<small>Año</small>
         </div>
-        <div>
-          <h3>1º Año</h3>
-          <p>Introducción a las ciencias sociales, conceptos fundamentales y metodología básica.</p>
-          <div class="chips">
-            <span class="chip cs">Ciencias Sociales</span>
-          </div>
-        </div>
+        <div></div>
         <div class="actions">
-          <a class="btn cs" href="./1er-anio/">Entrar a 1º Año</a>
+          <a class="btn cs" href="./1er-anio/">Cs. Sociales</a>
         </div>
       </li>
 
@@ -116,13 +80,7 @@
         <div class="badge-year">
           2º<small>Año</small>
         </div>
-        <div>
-          <h3>2º Año</h3>
-          <p>Historia Argentina y Mundial. Geografía general.</p>
-          <div class="chips">
-            <span class="chip">Historia</span><span class="chip geo">Geografía</span>
-          </div>
-        </div>
+        <div></div>
         <div class="actions">
           <a class="btn" href="./2do-anio/historia/">Ver Historia</a>
           <a class="btn geo" href="./2do-anio/geografia/">Ver Geografía</a>
@@ -134,13 +92,7 @@
         <div class="badge-year">
           3º<small>Año</small>
         </div>
-        <div>
-          <h3>3º Año</h3>
-          <p>Historia Contemporánea y Geografía Argentina.</p>
-          <div class="chips">
-            <span class="chip">Historia</span><span class="chip geo">Geografía</span>
-          </div>
-        </div>
+        <div></div>
         <div class="actions">
           <a class="btn" href="./3er-anio/historia/">Ver Historia</a>
           <a class="btn geo" href="./3er-anio/geografia/">Ver Geografía</a>
@@ -152,13 +104,7 @@
         <div class="badge-year">
           4º<small>Año</small>
         </div>
-        <div>
-          <h3>4º Año</h3>
-          <p>Historia Moderna y Geografía Económica.</p>
-          <div class="chips">
-            <span class="chip">Historia</span><span class="chip geo">Geografía</span>
-          </div>
-        </div>
+        <div></div>
         <div class="actions">
           <a class="btn" href="./4to-anio/historia/">Ver Historia</a>
           <a class="btn geo" href="./4to-anio/geografia/">Ver Geografía</a>
@@ -170,39 +116,16 @@
         <div class="badge-year">
           5º<small>Año</small>
         </div>
-        <div>
-          <h3>5º Año</h3>
-          <p>Historia Argentina Contemporánea y Geografía Regional. Preparación universitaria.</p>
-          <div class="chips">
-            <span class="chip">Historia</span><span class="chip geo">Geografía</span>
-          </div>
-        </div>
+        <div></div>
         <div class="actions">
           <a class="btn" href="./5to-anio/historia/">Ver Historia</a>
           <a class="btn geo" href="./5to-anio/geografia/">Ver Geografía</a>
         </div>
       </li>
     </ul>
-
-    <div class="grid" aria-label="Navegación adicional">
-      <section class="card">
-        <h3>📚 Por materia</h3>
-        <p class="muted">Accesos directos a los índices generales por materia.</p>
-        <p>
-          <a class="chip cs" href="./materia/ciencias-sociales/">Ciencias Sociales</a>
-          <a class="chip" href="./materia/historia/">Historia</a>
-          <a class="chip geo" href="./materia/geografia/">Geografía</a>
-        </p>
-      </section>
-      <section class="card">
-        <h3>ℹ️ Información</h3>
-        <p class="muted">Programa, metodología y datos de contacto del profesor.</p>
-        <p><a class="btn" href="./sobre-mi/">Ver información</a></p>
-      </section>
-    </div>
   </main>
 
-  <footer>© <span id="y"></span> · Materiales de Historia · Acceso simple y claro</footer>
+  <footer>© <span id="y"></span> · Materiales de Historia</footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
