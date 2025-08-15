@@ -1,22 +1,39 @@
 # 📚 Blog de Historia – GitHub Pages
 
-**Objetivo:** que todas y todos los alumnos puedan **acceder al material de estudio de manera rápida y fácil**, desde cualquier dispositivo.
+**Objetivo:** que todas y todos los alumnos puedan **acceder al material de estudio de manera rápida y fácil**, desde cualquier dispositivo, con una presentación clara de los contenidos de cada año según el Plan de Estudio 2025 de Argentina.
 
 ## 🧭 Estructura de la portada
 
-El inicio muestra una **lista por año** con:
+El inicio muestra una **lista por año** con tres columnas:
+1. **Columna izquierda:** recuadro con el número de año.
+2. **Columna central:** breve descripción de los contenidos principales del año (Historia y/o Geografía).
+3. **Columna derecha:** botones para acceder directamente al material correspondiente.
 
-- **Columna izquierda:** recuadro con el número y texto “Año”.
-- **Columna derecha:** botones de acceso directo al material de ese año/materia.
-- **Sin descripciones** ni etiquetas de materia bajo el texto, para mayor limpieza visual.
+### Contenidos por año
 
-### Botones por año
-- **1º Año:** _Cs. Sociales_  
-  `/<raíz>/1er-anio/`
-- **2º Año:** _Historia_ (`/2do-anio/historia/`) · _Geografía_ (`/2do-anio/geografia/`)
-- **3º Año:** _Historia_ (`/3er-anio/historia/`) · _Geografía_ (`/3er-anio/geografia/`)
-- **4º Año:** _Historia_ (`/4to-anio/historia/`) · _Geografía_ (`/4to-anio/geografia/`)
-- **5º Año:** _Historia_ (`/5to-anio/historia/`) · _Geografía_ (`/5to-anio/geografia/`)
+- **1º Año**  
+  _Introducción a las Ciencias Sociales_: reconocimiento del entorno social, instituciones y normas; nociones básicas de historia y geografía argentina y mundial.  
+  **Botón:** `Cs. Sociales`
+
+- **2º Año**  
+  _Historia Argentina y Mundial_: procesos sociales y políticos de los siglos XIX y XX.  
+  _Geografía_: organización del espacio mundial, continentes y océanos.  
+  **Botones:** `Ver Historia` · `Ver Geografía`
+
+- **3º Año**  
+  _Historia Contemporánea_: guerras mundiales, procesos de descolonización y transformaciones sociales.  
+  _Geografía Argentina_: recursos naturales, regiones y economía.  
+  **Botones:** `Ver Historia` · `Ver Geografía`
+
+- **4º Año**  
+  _Historia Moderna_: revoluciones políticas y cambios económicos entre los siglos XV y XVIII.  
+  _Geografía Económica_: circuitos productivos y globalización.  
+  **Botones:** `Ver Historia` · `Ver Geografía`
+
+- **5º Año**  
+  _Historia Argentina Contemporánea_: dictaduras, democracia y derechos humanos.  
+  _Geografía Regional_: integración latinoamericana y problemáticas ambientales globales.  
+  **Botones:** `Ver Historia` · `Ver Geografía`
 
 ## 📂 Estructura de carpetas
 / (raíz)
@@ -40,9 +57,10 @@ El inicio muestra una **lista por año** con:
 ├─ historia/index.html
 └─ geografia/index.html
 
-> Cada carpeta debe contener un `index.html` con los enlaces a los materiales (Drive, PDF, presentaciones, videos, etc.).
+> Cada carpeta debe contener un `index.html` con enlaces a los materiales (Drive, PDF, presentaciones, videos, etc.).
 
 ## 🚀 Publicación en GitHub Pages
+
 1. Ir a **Settings → Pages**.  
 2. En **Source**, seleccionar `Deploy from a branch`.  
 3. Elegir la rama `main` y la carpeta `/ (root)`.  
@@ -60,4 +78,3 @@ El inicio muestra una **lista por año** con:
   <li><a href="https://drive.google.com/...">Unidad 2 – Presentación</a></li>
 </ul>
 <p><a href="../../">← Volver al inicio</a></p>
-
