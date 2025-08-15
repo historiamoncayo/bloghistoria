@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>📚 Blog de Historia</title>
+  <title>Historia y Geografía – Profe Moncayo</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
   <style>
@@ -25,6 +25,16 @@
     h1,h2{font-family:Merriweather,Georgia,serif;margin:.2rem 0 .6rem}
     header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line);}
     .wrap{max-width:980px;margin:0 auto;padding:var(--space)}
+
+    /* Encabezado con foto */
+    .header-flex{
+      display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap
+    }
+    .header-flex img{
+      width:100px;height:100px;object-fit:cover;border-radius:12px;border:2px solid var(--line)
+    }
+
+    /* Lista de años */
     .years{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
     .year{
       display:grid;grid-template-columns: 80px 1fr auto;align-items:center;
@@ -47,7 +57,15 @@
     .btn:hover{background:var(--red-2)}
     .btn.geo{background:var(--geo)}
     .btn.cs{background:var(--red)}
+
+    /* Bloques finales */
+    .footer-blocks{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem
+    }
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1rem}
+
     footer{border-top:1px solid var(--line);margin-top:2rem;padding:var(--space);text-align:center;color:var(--ink-2)}
+
     @media (max-width:720px){
       .year{grid-template-columns:64px 1fr;grid-template-rows:auto auto;margin:0}
       .actions{grid-column:1/-1}
@@ -57,86 +75,70 @@
 <body>
   <header>
     <div class="wrap">
-      <strong style="color:var(--red);font-weight:900">Materiales de Historia</strong>
+      <div class="header-flex">
+        <h1>Historia y Geografía – Profe Moncayo</h1>
+        <img src="assets/img/profe-moncayo.jpg" alt="Foto del Profesor Moncayo">
+      </div>
     </div>
   </header>
 
   <main class="wrap">
-    <h1>📚 Blog de Historia</h1>
-
     <ul class="years">
-      <!-- 1º Año -->
       <li class="year">
-        <div class="badge-year">
-          1º<small>Año</small>
-        </div>
-        <div class="desc">
-          Introducción a las Ciencias Sociales: reconocimiento del entorno social, instituciones y normas; nociones básicas de historia y geografía argentina y mundial.
-        </div>
-        <div class="actions">
-          <a class="btn cs" href="./1er-anio/">Cs. Sociales</a>
-        </div>
+        <div class="badge-year">1º<small>Año</small></div>
+        <div class="desc">Introducción a las Ciencias Sociales: reconocimiento del entorno social, instituciones y normas; nociones básicas de historia y geografía argentina y mundial.</div>
+        <div class="actions"><a class="btn cs" href="./1er-anio/">Cs. Sociales</a></div>
       </li>
-
-      <!-- 2º Año -->
       <li class="year">
-        <div class="badge-year">
-          2º<small>Año</small>
-        </div>
-        <div class="desc">
-          Historia Argentina y Mundial: procesos sociales y políticos de los siglos XIX y XX. Geografía: organización del espacio mundial, continentes y océanos.
-        </div>
+        <div class="badge-year">2º<small>Año</small></div>
+        <div class="desc">Historia Argentina y Mundial: procesos sociales y políticos de los siglos XIX y XX. Geografía: organización del espacio mundial, continentes y océanos.</div>
         <div class="actions">
           <a class="btn" href="./2do-anio/historia/">Ver Historia</a>
           <a class="btn geo" href="./2do-anio/geografia/">Ver Geografía</a>
         </div>
       </li>
-
-      <!-- 3º Año -->
       <li class="year">
-        <div class="badge-year">
-          3º<small>Año</small>
-        </div>
-        <div class="desc">
-          Historia Contemporánea: guerras mundiales, procesos de descolonización y transformaciones sociales. Geografía Argentina: recursos naturales, regiones y economía.
-        </div>
+        <div class="badge-year">3º<small>Año</small></div>
+        <div class="desc">Historia Contemporánea: guerras mundiales, procesos de descolonización y transformaciones sociales. Geografía Argentina: recursos naturales, regiones y economía.</div>
         <div class="actions">
           <a class="btn" href="./3er-anio/historia/">Ver Historia</a>
           <a class="btn geo" href="./3er-anio/geografia/">Ver Geografía</a>
         </div>
       </li>
-
-      <!-- 4º Año -->
       <li class="year">
-        <div class="badge-year">
-          4º<small>Año</small>
-        </div>
-        <div class="desc">
-          Historia Moderna: revoluciones políticas y cambios económicos entre los siglos XV y XVIII. Geografía Económica: circuitos productivos y globalización.
-        </div>
+        <div class="badge-year">4º<small>Año</small></div>
+        <div class="desc">Historia Moderna: revoluciones políticas y cambios económicos entre los siglos XV y XVIII. Geografía Económica: circuitos productivos y globalización.</div>
         <div class="actions">
           <a class="btn" href="./4to-anio/historia/">Ver Historia</a>
           <a class="btn geo" href="./4to-anio/geografia/">Ver Geografía</a>
         </div>
       </li>
-
-      <!-- 5º Año -->
       <li class="year">
-        <div class="badge-year">
-          5º<small>Año</small>
-        </div>
-        <div class="desc">
-          Historia Argentina Contemporánea: dictaduras, democracia y derechos humanos. Geografía Regional: integración latinoamericana y problemáticas ambientales globales.
-        </div>
+        <div class="badge-year">5º<small>Año</small></div>
+        <div class="desc">Historia Argentina Contemporánea: dictaduras, democracia y derechos humanos. Geografía Regional: integración latinoamericana y problemáticas ambientales globales.</div>
         <div class="actions">
           <a class="btn" href="./5to-anio/historia/">Ver Historia</a>
           <a class="btn geo" href="./5to-anio/geografia/">Ver Geografía</a>
         </div>
       </li>
     </ul>
+
+    <!-- Bloques finales -->
+    <div class="footer-blocks">
+      <div class="card">
+        <h2>📚 Material de interés adicional</h2>
+        <p>En este espacio podrás encontrar enlaces a recursos extra, bibliografía recomendada, artículos académicos y materiales complementarios que enriquecen los contenidos vistos en clase.</p>
+      </div>
+      <div class="card">
+        <h2>👤 Datos del profesor</h2>
+        <p><strong>Nombre:</strong> Juan Moncayo</p>
+        <p><strong>Celular:</strong> +54 9 11 1234 5678</p>
+        <p><strong>Correo electrónico:</strong> juan.moncayo@colegio.edu.ar</p>
+      </div>
+    </div>
   </main>
 
-  <footer>© <span id="y"></span> · Materiales de Historia</footer>
+  <footer>© <span id="y"></span> · Materiales de Historia y Geografía – Profe Moncayo</footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
